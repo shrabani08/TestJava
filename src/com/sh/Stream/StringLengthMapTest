@@ -1,0 +1,13 @@
+//10. return a map with a length for each string. 
+import java.util.*; 
+import java.util.stream.IntStream; 
+import java.util.stream.Collectors;
+class StringLengthMapTest {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        List<String> strList=Arrays.asList("abc goal","Spring fest","abspringtest goal","bgf goal");
+   Map<Integer,List<String>> map= strList.stream().collect(Collectors.groupingBy(a->a.length()));
+
+    map.entrySet().stream().forEach(System.out::println);
+    }
+}
