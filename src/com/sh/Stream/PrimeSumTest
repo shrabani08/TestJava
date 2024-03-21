@@ -1,0 +1,26 @@
+//10. sum of qube of all distinct prime numbers
+import java.util.*; 
+import java.util.stream.IntStream; 
+import java.util.stream.Collectors;
+class PrimeSumTest {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        List<Integer> strList1=Arrays.asList(2,4,5,8,33,89,65,5,4,88);
+        Integer sum =strList1.stream().filter(a->primeCheck(a)).distinct().reduce(0,Integer::sum);
+  System.out.println(sum);
+  
+   IntStream intStream=IntStream.of(2,4,5,8,33,89,65,5,4,88);
+Integer sum2 =intStream.filter(a->primeCheck(a)).distinct().sum();
+   System.out.println(sum2);
+
+ Integer sum3 =strList1.stream().filter(a->primeCheck(a)).distinct().mapToInt(Integer::intValue).reduce(0,Integer::sum);
+  System.out.println(sum3);
+ 
+  
+    }
+    private static boolean primeCheck(Integer num){
+        //System.out.println(num);
+        return IntStream.rangeClosed(2,num/2).noneMatch(i->num%i==0);
+    }
+
+}
