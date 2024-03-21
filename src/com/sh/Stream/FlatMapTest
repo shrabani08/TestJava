@@ -1,0 +1,30 @@
+//13. flatmap
+import java.util.*; 
+import java.util.stream.Stream; 
+import java.util.stream.Collectors;
+class FlatMapTest {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        List<String> strList1=Arrays.asList("abc goal","Spring fest");
+         List<String> strList2=Arrays.asList("abspringtest goal","bgf goal");
+        List<String> strList3=Arrays.asList("abc goal","Spring fest");
+        List<List<String>> listOfListofString = 
+                Arrays.asList(strList1, strList2, strList3); 
+        List<String> flatMapResult= listOfListofString.stream().flatMap(a->a.stream()).collect(Collectors.toList());
+
+    flatMapResult.stream().forEach(System.out::println);
+    
+  // strList1.stream().map(a->a.charAt(2)).forEach(System.out::println);
+   
+    strList1.stream().flatMap(a->Stream.of(a.charAt(2))).forEach(System.out::println);
+    
+     // Creating a List of Strings 
+    //    List<String> list = Arrays.asList("Geeks", "GFG", 
+      //                           "GeeksforGeeks", "gfg"); 
+  
+        // Using Stream flatMap(Function mapper) 
+       // list.stream().flatMap(str ->  Stream.of(str.charAt(2))). forEach(System.out::println); 
+
+  
+    }
+}
