@@ -1,0 +1,13 @@
+//9. list all the words which have length more than 4.
+import java.util.*; 
+import java.util.stream.IntStream; 
+import java.util.stream.Collectors;
+class StringLengthTest {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        List<String> strList=Arrays.asList("abc goal","Spring fest","abspringtest goal");
+    strList.stream().filter(a-> a.length()>8).forEach(System.out::println);
+
+
+    }
+}
