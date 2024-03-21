@@ -1,0 +1,13 @@
+//8. list down all words started with "ab"
+import java.util.*; 
+import java.util.stream.IntStream; 
+import java.util.stream.Collectors;
+class StartswithStringTest {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        List<String> strList=Arrays.asList("abc goal","Spring fest","abspringtest goal");
+    strList.stream().filter(a-> a.startsWith("ab")).forEach(System.out::println);
+
+
+    }
+}
