@@ -1,0 +1,16 @@
+//7. count number of words which contains "goal"
+import java.util.*; 
+import java.util.stream.IntStream; 
+import java.util.stream.Collectors;
+class GoalStringsCount {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        List<String> strList=Arrays.asList("abc goal","Spring fest","springtest goal");
+      long count=  strList.stream().filter(a-> a.contains("goal")).count();
+      System.out.println("There are total "+count+" word containg goal");
+      
+    //  strList.add("My goal");  --Exception in thread "main" java.lang.UnsupportedOperationException
+      long count2=  strList.stream().filter(a-> a.contains("goal")).collect(Collectors.counting());
+      System.out.println("There are total "+count2+" word containg goal");
+    }
+}
