@@ -1,0 +1,11 @@
+//6.print all the words which contains "spring".
+import java.util.*; 
+import java.util.stream.IntStream; 
+
+class SpringStrings {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        List<String> strList=Arrays.asList("abc","Spring fest","springtest");
+        strList.stream().filter(a-> a.contains("Spring")).forEach(System.out::println);
+    }
+}
