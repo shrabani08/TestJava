@@ -1,0 +1,13 @@
+//14. distinct element from list to set using collector
+import java.util.*; 
+import java.util.stream.IntStream; 
+import java.util.stream.Collectors;
+class ListToSetTest {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        List<String> strList=Arrays.asList("abc goal","Spring fest","abspringtest goal","bgf goal","abc goal","Spring fest");
+   Set<String> set= strList.stream().collect(Collectors.toSet());
+
+    set.stream().forEach(System.out::println);
+    }
+}
