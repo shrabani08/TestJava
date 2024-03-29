@@ -1,0 +1,14 @@
+//25. Write a Java program to remove all duplicate elements from a list using streams. 
+import java.util.*;
+
+import java.util.stream.Collectors;
+
+class StringDistinctTest {
+    public static void main(String[] args) {
+        System.out.println("Try java 8");
+        
+        List<String> strList =Arrays.asList("abc","ghi","ghi","yrey","yrey");
+
+       strList.stream().distinct().forEach(System.out::println);
+    }
+}
