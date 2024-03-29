@@ -1,0 +1,14 @@
+//18. create two seperate list for length more or less than 4
+import java.util.*;
+
+import java.util.stream.Collectors;
+class StringPartitionTest {
+    public static void main(String[] args) {
+        System.out.println("Try java 8");
+        
+        List<String> strList =Arrays.asList("abc","defgh","ghi","jdsf","yrey");
+        
+       Map<Boolean,List<String>> strMap= strList.stream().collect(Collectors.partitioningBy(a->a.length()>4));
+       System.out.println(strMap.entrySet()); 
+    }
+}
