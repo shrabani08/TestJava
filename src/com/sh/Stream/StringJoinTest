@@ -6,7 +6,7 @@ class StringJoinTest {
     public static void main(String[] args) {
         System.out.println("Try java 8");
         
-        List<String> strList =Arrays.asList("abc,def,ghi");
+        List<String> strList =Arrays.asList("abc","def","ghi");
         
        String str= strList.stream().collect(Collectors.joining(",","pre-","-post"));
        System.out.println(str); 
