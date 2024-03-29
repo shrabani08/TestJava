@@ -1,0 +1,14 @@
+//17. group strings according to their length
+import java.util.*;
+
+import java.util.stream.Collectors;
+class StringGroupTest {
+    public static void main(String[] args) {
+        System.out.println("Try java 8");
+        
+        List<String> strList =Arrays.asList("abc","defgh","ghi","jdsf","yrey");
+        
+       Map<Integer,List<String>> strMap= strList.stream().collect(Collectors.groupingBy(a->a.length()));
+       System.out.println(strMap.entrySet()); 
+    }
+}
