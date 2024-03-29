@@ -1,0 +1,14 @@
+//16.number of entrys with collector api
+import java.util.*;
+
+import java.util.stream.Collectors;
+class StringCountTest {
+    public static void main(String[] args) {
+        System.out.println("Try java 8");
+        
+        List<String> strList =Arrays.asList("abc","def","ghi");
+        
+       Long strCount= strList.stream().collect(Collectors.counting());
+       System.out.println(strCount); 
+    }
+}
