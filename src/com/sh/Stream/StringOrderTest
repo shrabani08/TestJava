@@ -1,0 +1,16 @@
+//28. Write a Java program to sort a list of strings in alphabetical order, ascending and descending using streams.
+import java.util.*;
+
+import java.util.stream.Collectors;
+
+class StringOrderTest {
+    public static void main(String[] args) {
+        System.out.println("Try java 8");
+        
+        List<String> strList =Arrays.asList("abc","dWERgh","ghi","abQDR","yrey");
+        
+       strList.stream().sorted().forEach(System.out::println);
+       System.out.println("=============================");
+       strList.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);
+    }
+}
