@@ -1,0 +1,19 @@
+//25. Write a Java program to calculate the sum of all even, odd numbers in a list using streams. 
+import java.util.*;
+import java.util.stream.Stream;
+import java.util.stream.Collectors;
+class IntegerSumTest {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        List<Integer> intList= Arrays.asList(2,4,6,5,8,9,11);
+       
+       Integer sumOdd=intList.stream().filter(i->i%2!=0).mapToInt(Integer::intValue).sum();
+       
+       System.out.println("Sum of all odd numbers:"+sumOdd);
+       
+         Integer sumEven=intList.stream().filter(i->i%2=0).mapToInt(Integer::intValue).sum();
+       
+       System.out.println("Sum of all even numbers"+sumEven);
+       
+    }
+}
