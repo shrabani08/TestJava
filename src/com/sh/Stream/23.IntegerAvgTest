@@ -1,0 +1,12 @@
+//23. Write a Java program to calculate the average of a list of integers using streams. -TBD
+import java.util.*;
+import java.util.stream.Stream;
+import java.util.stream.Collectors;
+class IntegerAvgTest {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        List<Integer> intList= Arrays.asList(2,4,6);
+        Double avg=intList.stream().collect(Collectors.averagingInt(n->Integer.valueOf(n)));
+        System.out.println("Avarage is::"+avg);
+    }
+}
