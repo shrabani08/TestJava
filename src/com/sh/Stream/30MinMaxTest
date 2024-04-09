@@ -1,0 +1,22 @@
+//30. Write a Java program to find the maximum and minimum values in a list of integers using streams. 
+
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream; 
+class minMaxTest {
+    public static void main(String[] args) {
+        List<Integer> intList =Arrays.asList(2,65,4,77,88,9);
+       int i= intList.stream().sorted().findFirst().orElse(0);
+       System.out.println(i);
+       int i2= intList.stream().sorted(Comparator.reverseOrder()).findFirst().orElse(0);
+       System.out.println(i2);
+       Integer i3= intList.stream().max(Integer::compare).get();
+       System.out.println(i3);
+       
+       Integer i4= intList.stream().max(Comparator.reverseOrder()).get();
+       System.out.println(i4);
+
+/*Optional<String> obj = s.collect(Collectors.maxBy(Comparator.reverseOrder())); */
+       
+    }
+}
