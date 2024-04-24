@@ -1,0 +1,22 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+public class TestStatic {
+    int a;
+    static int b;
+    public void testStaticVar(){
+         System.out.println("instance variable value from other method ::"+a);
+          System.out.println("Static variable value  other method::"+b);
+    }
+    public static void main(String[] args) {
+        
+       // System.out.println("Static variable value from main::"+TestStatic.a);
+        ///tmp/xeKc0smndJ/TestStatic.java:10: error: non-static variable a cannot be referenced from a static context
+       TestStatic obj =new TestStatic();
+      System.out.println("instance variable value from main::"+obj.a);
+      obj.testStaticVar();
+      
+            System.out.println("Static variable value from main::"+b);
+        
+    }
+}
